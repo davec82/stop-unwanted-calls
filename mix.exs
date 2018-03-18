@@ -1,4 +1,4 @@
-defmodule LoginPhoneCall.Mixfile do
+defmodule StopUnwantedCalls.Mixfile do
   use Mix.Project
 
   def project do
@@ -23,7 +23,7 @@ defmodule LoginPhoneCall.Mixfile do
   def application do
     [
       extra_applications: [:logger],
-      mod: {LoginPhoneCall.Application, []}
+      mod: {StopUnwantedCalls.Application, []}
     ]
   end
 

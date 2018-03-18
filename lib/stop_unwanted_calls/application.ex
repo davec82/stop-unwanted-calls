@@ -1,4 +1,4 @@
-defmodule LoginPhoneCall.Application do
+defmodule StopUnwantedCalls.Application do
   @moduledoc false
 
   use Application
@@ -7,7 +7,7 @@ defmodule LoginPhoneCall.Application do
     # List all child processes to be supervised
 
     children =
-      case Application.get_env(:login_phone_call, :environment) do
+      case Application.get_env(:stop_unwanted_calls, :environment) do
         :test ->
           []
 
@@ -15,7 +15,7 @@ defmodule LoginPhoneCall.Application do
           ref = make_ref()
 
           socket_port =
-            Application.get_env(:login_phone_call, :socket_port, 8084)
+            Application.get_env(:stop_unwanted_calls, :socket_port, 8084)
 
           ranch_listener_spec =
             :ranch.child_spec(
@@ -31,7 +31,7 @@ defmodule LoginPhoneCall.Application do
           # EventSocketOutbound.start_link()
       end
 
-    opts = [strategy: :one_for_one, name: LoginPhoneCall.Supervisor]
+    opts = [strategy: :one_for_one, name: StopUnwantedCalls.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
