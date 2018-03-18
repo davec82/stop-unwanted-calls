@@ -7,26 +7,6 @@ defmodule StopUnwantedCalls.Test.Support.EventProtocol do
     GenServer.start_link(__MODULE__, {test_pid, params}, [])
   end
 
-  def execute(pid, command, args) do
-    GenServer.call(pid, {{:execute}, {command, args}})
-  end
-
-  def connect(pid) do
-    GenServer.call(pid, {:connect})
-  end
-
-  def filter(pid, args) do
-    GenServer.call(pid, {{:filter}, {args}})
-  end
-
-  def eventplain(pid, args) do
-    GenServer.call(pid, {{:eventplain}, {args}})
-  end
-
-  def hangup(pid, reason \\ "") do
-    GenServer.call(pid, {{:hangup}, {reason}})
-  end
-
   # Server Callbacks
 
   def init({test_pid, params}) do
