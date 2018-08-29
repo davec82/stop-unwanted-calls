@@ -5,7 +5,7 @@ defmodule StopUnwantedCalls.Mixfile do
     [
       app: :stop_unwanted_calls,
       version: "0.1.0",
-      elixir: "~> 1.4",
+      elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -34,7 +34,7 @@ defmodule StopUnwantedCalls.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:event_socket_outbound, "~> 0.1.0"},
+      {:event_socket_outbound, "~> 0.2.0"},
       {:httpoison, "~> 1.0"},
       {:poison, "~> 3.1"},
       # release stuff
