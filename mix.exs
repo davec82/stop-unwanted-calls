@@ -34,7 +34,7 @@ defmodule StopUnwantedCalls.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:event_socket_outbound, "~> 0.2.0"},
+      {:event_socket_outbound, "~> 0.3.0"},
       {:httpoison, "~> 1.0"},
       {:poison, "~> 3.1"},
       # release stuff
