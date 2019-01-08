@@ -20,9 +20,8 @@ defmodule StopUnwantedCalls.Application do
           ranch_listener_spec =
             :ranch.child_spec(
               ref,
-              10,
               :ranch_tcp,
-              [{:port, socket_port}],
+              %{num_acceptors: 10, socket_opts: [{:port, socket_port}]},
               EventSocketOutbound.Protocol,
               :ranch
             )

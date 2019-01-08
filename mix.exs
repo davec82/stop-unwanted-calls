@@ -34,16 +34,16 @@ defmodule StopUnwantedCalls.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:event_socket_outbound, "~> 0.3.0"},
+      {:event_socket_outbound, "~> 0.4.0"},
       {:httpoison, "~> 1.0"},
       {:poison, "~> 3.1"},
       # release stuff
       {:distillery, "~> 1.5"},
       {:conform, "~> 2.5"},
       # devel stuff
-      {:credo, "~> 0.8", only: [:dev, :test]},
+      {:credo, "~> 1.0", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.8.0", only: :test}
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 end
