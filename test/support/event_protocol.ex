@@ -1,4 +1,5 @@
 defmodule StopUnwantedCalls.Test.Support.EventProtocol do
+  @moduledoc false
   use GenServer
 
   # Client API

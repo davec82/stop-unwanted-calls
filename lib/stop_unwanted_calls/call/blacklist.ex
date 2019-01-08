@@ -7,7 +7,8 @@ defmodule StopUnwantedCalls.Blacklist do
   @path Path.join(["lib/stop_unwanted_calls/call", @path_env[Mix.env()]])
 
   def is_blacklisted?(caller_id_number) do
-    File.stream!(@path)
+    @path
+    |> File.stream!()
     |> Stream.map(&String.replace(&1, "\n", ""))
     |> Enum.any?(fn line ->
       line == caller_id_number
