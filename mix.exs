@@ -41,9 +41,9 @@ defmodule StopUnwantedCalls.Mixfile do
       {:distillery, "~> 1.5"},
       {:conform, "~> 2.5"},
       # devel stuff
-      {:credo, "~> 1.0", only: [:dev, :test]},
+      {:credo, "~> 1.5", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.14", only: :test}
     ]
   end
 end
