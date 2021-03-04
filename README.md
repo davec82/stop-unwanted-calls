@@ -1,5 +1,5 @@
 # Stop Unwanted Calls
-[![Build Status](https://travis-ci.org/davec82/stop-unwanted-calls.png?branch=master)](https://travis-ci.org/davec82/stop-unwanted-calls)
+[![CI](https://github.com/davec82/stop-unwanted-calls/workflows/CI/badge.svg?branch=master)](https://github.com/davec82/stop-unwanted-calls/actions?query=branch%3Amaster+workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/davec82/stop-unwanted-calls/badge.svg?branch=master)](https://coveralls.io/github/davec82/stop-unwanted-calls?branch=master)
 
 `StopUnwantedCalls` is a simple Elixir application based on [Event Socket Outbound](https://hex.pm/packages/event_socket_outbound), an implementaion of FreeSWITCH's Event Socket Outbound, used to stop unwanted phone calls.
